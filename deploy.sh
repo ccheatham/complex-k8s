@@ -1,4 +1,4 @@
-docker build -t ccheatham/complex-server:latest t ccheatham/complex-server:$SHA  -f  ./server/Dockerfile ./server
+docker build -t ccheatham/complex-server:latest t ccheatham/complex-server:$SHA  -f ./server/Dockerfile ./server
 docker build -t ccheatham/complex-worker:latest -t ccheatham/complex-worker:$SHA -f ./worker/Dockerfile ./worker
 docker build -t ccheatham/complex-client:latest -t ccheatham/complex-client:$SHA -f ./client/Dockerfile ./client
 
