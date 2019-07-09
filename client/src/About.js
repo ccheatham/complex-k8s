@@ -5,9 +5,7 @@ class About extends Component {
 
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
-        Senior Solutions Architect @ OpenLegacy
-      </div>
+      <div style={{ textAlign: "center" }} />
     );
   }
 }

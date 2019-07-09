@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Links from './Links';
 import About from './About';
+import Cards from './Cards';
 
 class App extends Component {
   render() {
@@ -14,13 +15,15 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">This, that, and the other</h1>
           </header>
-          <header className="App-header">
-            <Link to="/">Home</Link>
-            <Link to="/links">Links</Link>
+          <header className="App OtherApp-header">
+            <Link to="/" className="App-link">Home</Link>
+            <Link to="/links" className="App-link">Links</Link>
+            <Link to="/cards" className="App-link">Cards Test</Link>
           </header>
           <div>
             <Route exact path="/" component={About} />
             <Route path="/links" component={Links} />
+            <Route path="/cards" component={Cards} />
           </div>
         </div>
       </Router>

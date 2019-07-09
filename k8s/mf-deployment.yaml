@@ -14,10 +14,6 @@ spec:
     spec:
       containers:
       - name: mf-rpc
-        image: ccheatham/complex-mf-rpc-api
-        resources:
-          limits:
-            memory: "256Mi"
-            cpu: "325m"
+        image: ccheatham/complex-mf-rpc-api:v1
         ports:
         - containerPort: 8080

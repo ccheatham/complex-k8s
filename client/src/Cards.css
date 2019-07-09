@@ -1,0 +1,9 @@
+.Cards {
+  text-align: center;
+}
+
+.Card-Item {
+    width: 512px;
+    margin: auto;
+    text-align: left;
+}

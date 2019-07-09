@@ -24,6 +24,10 @@ pgClient
   .query('CREATE TABLE IF NOT EXISTS values (number INT)')
   .catch(err => console.log(err));
 
+pgClient
+  .query('CREATE TABLE IF NOT EXISTS ccUses (custNumber VARCHAR)')
+  .catch(err => console.log(err));
+
 // Redis Client Setup
 const redis = require('redis');
 const redisClient = redis.createClient({
@@ -62,6 +66,22 @@ app.post('/values', async (req, res) => {
   redisPublisher.publish('insert', index);
   pgClient.query('INSERT INTO values(number) VALUES($1)', [index]);
 
+  res.send({ working: true });
+});
+
+app.get('/ccuses/count', async (req, res) => {
+  const values = await pgClient.query('SELECT COUNT(*) from ccUses');
+  res.send(values.rows);
+});
+
+app.get('/ccuses/all', async (req, res) => {
+  const values = await pgClient.query('SELECT * from ccUses');
+  res.send(values.rows);
+});
+
+app.post('/ccuses', async (req, res) => {
+  const used = req.body.used;
+  pgClient.query('INSERT INTO ccUses(custNumber) VALUES($1)', [used]);
   res.send({ working: true });
 });
 
