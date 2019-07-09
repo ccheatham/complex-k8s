@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mf-rpc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: mf-rpc
+  template:
+    metadata:
+      labels:
+        component: mf-rpc
+    spec:
+      containers:
+      - name: mf-rpc
+        image: ccheatham/complex-mf-rpc-api
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "125m"
+        ports:
+        - containerPort: 8080

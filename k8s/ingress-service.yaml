@@ -25,6 +25,10 @@ spec:
             backend:
               serviceName: server-cluster-ip-service
               servicePort: 5000
+          - path: /mfapi/?(.*)
+            backend:
+              serviceName: mf-cluster-ip-service
+              servicePort: 8080
     - host: www.chedcheatham.com
       http:
         paths:
@@ -36,3 +40,7 @@ spec:
             backend:
               serviceName: server-cluster-ip-service
               servicePort: 5000
+          - path: /mfapi/?(.*)
+            backend:
+              serviceName: mf-cluster-ip-service
+              servicePort: 8080
