@@ -17,7 +17,7 @@ spec:
         image: ccheatham/complex-mf-rpc-api
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "125m"
+            memory: "256Mi"
+            cpu: "325m"
         ports:
         - containerPort: 8080
