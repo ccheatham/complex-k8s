@@ -38,7 +38,9 @@ const RootQuery = new GraphQLObjectType({
       type: CustomerCreditCardType,
       args: { id: { type: GraphQLNonNull(GraphQLString) } },
       resolve(parentValue, args) {
-        return axios.post(`http://${keys.mfHost}:${key.mfPort}/creditcardsservice`, { custId: args.id })
+        const url = `http://${keys.mfHost}:${keys.mfPort}/creditcardsservice`;
+        console.log(url);
+        return axios.post(url, { custId: args.id })
           .then(({ data: cards }) => cards);
       }
     }
