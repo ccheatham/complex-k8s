@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "23",
+      "firstName": "Ched",
+      "age": 25,
+      "companyId": "1"
+    },
+    {
+      "id": "24",
+      "firstName": "Angie",
+      "age": 45,
+      "companyId": "1"
+    },
+    {
+      "id": "25",
+      "firstName": "Jim",
+      "age": 45,
+      "companyId": "2"
+    },
+    {
+      "firstName": "Bob",
+      "age": 12,
+      "id": "av7wpqJ"
+    },
+    {
+      "firstName": "Derrick",
+      "age": 63,
+      "id": "gdm6Tnz"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "description": "iPhone"
+    },
+    {
+      "id": "2",
+      "name": "Photivo",
+      "description": "Photos"
+    }
+  ]
+}

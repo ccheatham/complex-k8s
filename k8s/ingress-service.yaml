@@ -29,6 +29,10 @@ spec:
             backend:
               serviceName: mf-cluster-ip-service
               servicePort: 8080
+          - path: /g/?(.*)
+            backend:
+              serviceName: graph-cluster-ip-service
+              servicePort: 4000
     - host: www.chedcheatham.com
       http:
         paths:
@@ -44,3 +48,7 @@ spec:
             backend:
               serviceName: mf-cluster-ip-service
               servicePort: 8080
+          - path: /g/?(.*)
+            backend:
+              serviceName: graph-cluster-ip-service
+              servicePort: 4000

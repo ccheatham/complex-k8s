@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graph-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: graph
+  template:
+    metadata:
+      labels:
+        component: graph
+    spec:
+      containers:
+      - name: graph
+        image: ccheatham/complex-graph
+        env:
+          - name: MF_HOST
+            value: mf-cluster-ip-service
+          - name: MF_PORT
+            value: "8080"
+        ports:
+        - containerPort: 4000
