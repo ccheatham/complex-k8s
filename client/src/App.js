@@ -19,6 +19,7 @@ class App extends Component {
             <Link to="/" className="App-link">Home</Link>
             <Link to="/links" className="App-link">Links</Link>
             <Link to="/cards" className="App-link">Cards Test</Link>
+            <a href="/g/graphql" className="App-link">GraphQL</a>
           </header>
           <div>
             <Route exact path="/" component={About} />
