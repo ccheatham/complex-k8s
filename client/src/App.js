@@ -13,13 +13,13 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">This, that, and the other</h1>
+            <h1 className="App-title"></h1>
           </header>
           <header className="App OtherApp-header">
             <Link to="/" className="App-link">Home</Link>
             <Link to="/links" className="App-link">Links</Link>
             <Link to="/cards" className="App-link">Cards Test</Link>
-            <a href="/g/graphql" className="App-link">GraphQL</a>
+            <a href="/g/graphql" target="_blank" className="App-link">GraphQL</a>
           </header>
           <div>
             <Route exact path="/" component={About} />
