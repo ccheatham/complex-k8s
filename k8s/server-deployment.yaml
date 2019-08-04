@@ -33,9 +33,5 @@ spec:
               secretKeyRef: 
                 name: pgpassword
                 key: PGPASSWORD
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "125m"
         ports:
         - containerPort: 5000
